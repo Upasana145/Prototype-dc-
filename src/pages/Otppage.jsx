@@ -210,22 +210,23 @@
 
 // export default Signin;
 import React, { useState } from "react";
-import logo from "../Images/logo.gif";
-import backgroundImage from "../Images/Background Images.jpg";
+import logo from "../Images/logo.png";
+
 import { toast } from "react-toastify";
 import { validateEmail } from "../utils/valEmail";
 import { Navigate } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const containerStyle = {
-  backgroundImage: `url(${backgroundImage})`,
-  backgroundColor: "red",
+  // backgroundImage: `url(${backgroundImage})`,
+  backgroundColor: "#ebe7e8",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
   minHeight: "100vh",
 };
 
 function Otppage() {
+  const navigate = useNavigate();
   // 0 -> forgetpw 1 -> otp 2 ->confirm
   const [pageNum, setPageNum] = useState(0);
   const [form, setForm] = useState({
@@ -261,7 +262,7 @@ function Otppage() {
 
   const handleClose = () => {
     // Navigate to the dashboard page
-    Navigate("/");
+    navigate("/");
   };
 
   return (
@@ -278,24 +279,22 @@ function Otppage() {
             </button>
             <form onSubmit={handleVerify}>
               <h1 className="reset-heading">Create Your New Password</h1>
-              <br />
-              <input
-                type="text"
-                name="otp"
-                placeholder="Enter your password"
-                className="reset-input-field"
-                style={{ width: "420px", marginBottom: "15px" }}
-              />
-              <br />
+              <div className="mb-3">
+                <input
+                  type="text"
+                  name="newpassword"
+                  placeholder="Enter your password"
+                  className="form-control"
+                  style={{ marginBottom: "15px" }}
+                />
 
-              <input
-                type="text"
-                name="otp"
-                placeholder="Confirm your password"
-                className="reset-input-field"
-                style={{ width: "420px" }}
-              />
-              <br />
+                <input
+                  type="text"
+                  name="confirmpassword"
+                  placeholder="Confirm your password"
+                  className="form-control"
+                />
+              </div>
               <input type="submit" value="Verify" />
             </form>
           </div>
@@ -307,18 +306,18 @@ function Otppage() {
               </button>
               <form onSubmit={handleVerify}>
                 <h1 className="reset-heading">Verify your Email</h1>
-                <br />
-                <label htmlFor="vendor-login">
-                  <strong>Enter OTP</strong>
-                </label>
-                <br />
-                <input
-                  type="text"
-                  name="otp"
-                  placeholder="Enter OTP"
-                  className="form-control"
-                />
-                <br />
+                <div className="mb-3">
+                  <label htmlFor="vendor-login">
+                    <strong>Enter OTP</strong>
+                  </label>
+
+                  <input
+                    type="text"
+                    name="otp"
+                    placeholder="Enter OTP"
+                    className="form-control"
+                  />
+                </div>
                 <input type="submit" value="Verify" />
               </form>
             </div>

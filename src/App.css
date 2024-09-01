@@ -58,6 +58,7 @@ a {
   outline: none;
   border-radius: 4px;
   padding: 3px;
+  border: var(--bs-border-width) solid var(--bs-border-color);
 }
 .input-group {
   display: flex;
@@ -80,7 +81,7 @@ a {
   color: grey;
 }
 .submit-button {
-  background-color: #e45626;
+  background-color: #247db5;
 
   color: white;
   font-weight: 700;
@@ -93,7 +94,7 @@ a {
   transition: 0.5s;
 }
 .submit-button:hover {
-  background-color: #cd5027;
+  background-color: #0d5a89;
 }
 
 /* for Reset password */
@@ -115,7 +116,7 @@ a {
 }
 
 .resetcontent input[type="submit"] {
-  background-color: #e45626;
+  background-color: #247db5;
   color: white;
   font-weight: 700;
   border: none;
@@ -126,7 +127,7 @@ a {
   margin: 39px 0px 0px 354px;
 }
 .resetcontent input[type="submit"]:hover {
-  background-color: #cd5027;
+  background-color: #0d5a89;
 }
 
 .reset-input-field {
@@ -142,17 +143,19 @@ a {
   margin: 0px 0px 0px 450px;
 }
 .reset-heading {
-  text-align: center; /* Center the heading horizontally */
-  font-size: 32px; /* Adjust the font size as needed */
-  margin-bottom: 15px;
-  color: #71572f;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #8c8a8a;
+  margin-top: -18px;
+  margin-right: 24px;
 }
 
 .welcome-heading {
   text-align: center; /* Center the heading horizontally */
   font-size: 32px; /* Adjust the font size as needed */
   margin-bottom: 45px;
-  color: #71572f;
+  color: #8c8a8a;
 }
 
 /* Sidebar  */
@@ -276,13 +279,13 @@ a {
   font-size: 20px;
   outline: none;
   font-weight: bold;
-  background-color: #e45626;
-  border: 2px solid #e45626;
+  background-color: #247db5;
+  border: 2px solid #247db5;
   transition: 0.5s;
   color: white;
 }
 .form-btn button:hover {
-  background-color: #cd5027;
+  background-color: #1f4e74;
 }
 
 /* ImageContainer */

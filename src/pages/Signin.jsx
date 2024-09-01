@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import logo from "../assets/media/logos/logo-1-dark.svg";
-import logo from "../Images/logo.gif";
+import logo from "../Images/logo.png";
 // import logo from "../src/assets/media/logos/logo-1.svg";
 // import bgimage from "../assets/media/illustrations/sketchy-1/14.png";
 import backgroundImage from "../Images/Background Images.jpg";
@@ -39,7 +39,7 @@ function Signin() {
   };
 
   const containerStyle = {
-    backgroundImage: `url(${backgroundImage})`,
+    backgroundColor: "rgb(235, 231, 232)",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     minHeight: "100vh",
@@ -53,7 +53,7 @@ function Signin() {
             <img className="logo-image" alt="Logo" src={logo} />
           </a>
 
-          <h1 className="welcome-heading">Welcome To Sudisa Foundry </h1>
+          <h1 className="welcome-heading">Welcome To DataCore Systems</h1>
 
           <br></br>
 
